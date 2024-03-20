@@ -6,4 +6,9 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, 'dist'),
   },
+  module: {
+    rules: [
+      { test: /\.hbs/, loader: "handlebars-loader" },
+    ],
+  },
 });
