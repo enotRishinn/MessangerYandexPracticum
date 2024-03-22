@@ -1,0 +1,13 @@
+@import '../../../static/styles/colors.scss';
+
+.error-block-404 {
+    background-color: #{$color-slightly-gray};
+}
+
+.error-text, .error-block-500 {
+    height: 100vh;
+    display: grid;
+    position: relative;
+    place-items: center;
+    flex-direction: column;
+}

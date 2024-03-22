@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
+
+
+$font-error-code: "JejuMyeongjo";
+$font-standart-text: "Krona One", sans-serif;
+
+$font-weight-regular: 500;
+$font-weight-thin: 400;
+
+$font-large: #{$font-weight-regular} 40px/40px #{$font-standart-text};
+$font-big: #{$font-weight-regular} 32px/32px #{$font-standart-text};
+$font-medium: #{$font-weight-regular} 16px/16px #{$font-standart-text};
+$font-regular: #{$font-weight-regular} 12px/12px #{$font-standart-text};
+
+$font-error-code-large: #{$font-weight-thin} 40px/40px #{$font-error-code};
+
+
