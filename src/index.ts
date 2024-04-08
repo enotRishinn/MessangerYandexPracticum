@@ -4,6 +4,7 @@ import * as Pages from './pages';
 
 const pages: { [key: string]: string[] } = {
   '/login': [Pages.LoginPage],
+  '/register': [Pages.RegisterPage],
   '/505': [ Pages.BugFixErrorPage ],
   '/404': [ Pages.NotFoundErrorPage ],
 };
