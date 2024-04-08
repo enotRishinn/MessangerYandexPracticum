@@ -3,21 +3,22 @@ import * as Components from './components';
 import * as Pages from './pages';
 
 const pages: { [key: string]: string[] } = {
-  'bugFixErrorPage': [ Pages.BugFixErrorPage ],
-  'notFoundErrorPage': [ Pages.NotFoundErrorPage ],
+  '/login': [Pages.LoginPage],
+  '/505': [ Pages.BugFixErrorPage ],
+  '/404': [ Pages.NotFoundErrorPage ],
 };
 
 Object.entries(Components).forEach(([ name, component ]) => {
   Handlebars.registerPartial(name, component);
 });
 
-function navigate(page: string) {
-  const [ source, args ] = pages[page];
+function navigate(path: string) {
+  const [ source, args ] = pages[path];
   const handlebarsFunct = Handlebars.compile(source);
   document.body.innerHTML = handlebarsFunct(args);
 }
 
-document.addEventListener('DOMContentLoaded', () => navigate('bugFixErrorPage'));
+document.addEventListener('DOMContentLoaded', () => navigate(window.location.pathname));
 
 // document.addEventListener('click', e => {
 //   const page = e.target.getAttribute('page');

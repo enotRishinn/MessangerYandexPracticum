@@ -5,15 +5,15 @@
     background: #{$vertical-gradient-dark};
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font: #{$font-error-code-large};
+    font: #{$font-error-code};
 }
 
 .error-header {
     color: #{$color-gray};
-    font: #{$font-big};
+    font: #{$font-large};
 }
 
 .error-text {
     color: #{$color-light-black};
-    font: #{$font-regular};
+    font: #{$font-error-text};
 }

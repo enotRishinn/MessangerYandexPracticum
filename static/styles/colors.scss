@@ -16,4 +16,6 @@ $horizontal-gradient-dark: linear-gradient(to right, #{$color-pink} , #{$color-v
 $horizontal-gradient-light: linear-gradient(to right, #{$color-light-pink} , #{$color-violet});
 $vertical-gradient-dark: linear-gradient(#{$color-pink} , #{$color-violet});
 
+$dialog-shadow: 0px 0px 5px $color-light-black;
+
 $color-red: #FF2F2F;

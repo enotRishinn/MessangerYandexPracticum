@@ -1,0 +1,9 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss';    
+
+.dialog {
+    background: $color-white;
+    box-shadow: $dialog-shadow;
+    border-radius: 12px;
+    padding: 30px;
+}
