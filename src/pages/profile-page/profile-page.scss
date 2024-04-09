@@ -1,0 +1,34 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss';  
+
+.profile-page {
+    width: 300px;
+    background: $color-slightly-gray;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    &__header {
+        padding-bottom: 10px;
+    }
+
+    &__username {
+        width: fit-content;
+        font: $font-big;
+        display: block;
+        margin: 15px auto;
+    }
+  
+    &__input {
+      margin-top: 16px;
+    }
+
+    &__footer {
+        margin-top: 40px;
+        display: inline-grid;
+    }
+
+    &__link {
+        margin-top: 10px;
+        font: #{$font-regular-thin};
+    }
+  }

@@ -20,7 +20,6 @@ Object.entries(Components).forEach(([ name, component ]) => {
 function navigate(path: string) {
     if (!pages[path]) {
         window.location.pathname = '/login';
-        navigate('/login');
     } else {
         const [ source, args ] = pages[path];
         const handlebarsFunct = Handlebars.compile(source);
@@ -34,10 +33,7 @@ document.addEventListener('click', (e: MouseEvent) => {
     const page = (e.target as HTMLInputElement).getAttribute('page');
     if (page) {
         window.location.pathname = page;
-        navigate(page);
-
         e.preventDefault();
-        e.stopImmediatePropagation();
     }
   
 });
