@@ -4,12 +4,12 @@
             {{> DialogTitle title="Вход" }}
         </div>
         <div class="login-form__content">
-            {{> InputField class="login-form__input" id="login_form_username" title="Логин" name="login" }}
+            {{> InputField class="login-form__input" id="login_form_login" title="Логин" name="login" }}
             {{> InputField class="login-form__input" id="login_form_password" title="Пароль" name="password" type="password" }}
         </div>
         <div class="login-form__footer">
-            {{> Button class="login-form__button" id="log_in_button" value="Авторизоваться" }}
-            {{> Link class="login-form__link" id="sign_up_link" value="Нет аккаунта" }}
+            {{> Button class="login-form__button" id="log_in_button" value="Авторизоваться" page="/chats" }}
+            {{> Link class="login-form__link" id="sign_up_link" value="Нет аккаунта" page="/register" }}
         </div>
     </form>
 {{/ Dialog }}

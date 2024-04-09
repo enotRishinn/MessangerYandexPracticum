@@ -5,16 +5,16 @@
         </div>
         <div class="register-form__content">
             {{> InputField class="register-form__input" id="register_form_email" title="Почта" name="email" type="email" }}
-            {{> InputField class="register-form__input" id="register_form_username" title="Логин" name="login" }}
+            {{> InputField class="register-form__input" id="register_form_login" title="Логин" name="login" }}
             {{> InputField class="register-form__input" id="register_form_first_name" title="Имя" name="first_name" }}
             {{> InputField class="register-form__input" id="register_form_second_name" title="Фамилия" name="second_name" }}
             {{> InputField class="register-form__input" id="register_form_phone" title="Телефон" name="phone" type="tel" }}
             {{> InputField class="register-form__input" id="register_form_password" title="Пароль" name="password" type="password" }}
-            {{> InputField class="register-form__input" id="register_form_repeat_password" title="подтвердите пароль" name="repeat_password" type="password" }}
+            {{> InputField class="register-form__input" id="register_form_repeat_password" title="Подтвердите пароль" name="repeat_password" type="password" }}
         </div>
         <div class="register-form__footer">
-            {{> Button class="register-form__button" id="register_button" value="Зарегистрироваться" }}
-            {{> Link class="register-form__link" id="sign_in_link" value="Войти" }}
+            {{> Button class="register-form__button" id="register_button" value="Зарегистрироваться" page="/chats" }}
+            {{> Link class="register-form__link" id="sign_in_link" value="Войти" page="/login" }}
         </div>
     </form>
 {{/ Dialog }}

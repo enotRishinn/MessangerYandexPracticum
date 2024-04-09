@@ -5,9 +5,12 @@ import * as Pages from './pages';
 const pages: { [key: string]: string[] } = {
     '/login': [Pages.LoginPage],
     '/register': [Pages.RegisterPage],
-    '/chat-page': [Pages.ChatPage],
-    '/505': [ Pages.BugFixErrorPage ],
-    '/404': [ Pages.NotFoundErrorPage ],
+    '/chats': [Pages.ChatPage],
+    '/500': [Pages.BugFixErrorPage],
+    '/404': [Pages.NotFoundErrorPage],
+    '/profile': [Pages.ProfilePage],
+    '/change-password': [Pages.ChangePasswordPage],
+    '/edit-profile': [Pages.EditProfilePage]
 };
 
 Object.entries(Components).forEach(([ name, component ]) => {
@@ -27,12 +30,14 @@ function navigate(path: string) {
 
 document.addEventListener('DOMContentLoaded', () => navigate(window.location.pathname));
 
-// document.addEventListener('click', e => {
-//   const page = e.target.getAttribute('page');
-//   if (page) {
-//     navigate(page);
+document.addEventListener('click', (e: MouseEvent) => {
+    const page = (e.target as HTMLInputElement).getAttribute('page');
+    if (page) {
+        window.location.pathname = page;
+        navigate(page);
 
-//     e.preventDefault();
-//     e.stopImmediatePropagation();
-//   }
-// });
+        e.preventDefault();
+        e.stopImmediatePropagation();
+    }
+  
+});
