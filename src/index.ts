@@ -21,9 +21,13 @@ function navigate(path: string) {
     if (!pages[path]) {
         window.location.pathname = '/login';
     } else {
-        const [ source, args ] = pages[path];
-        const handlebarsFunct = Handlebars.compile(source);
-        document.body.innerHTML = handlebarsFunct(args);
+        const mainContent = document.getElementById("main-content");
+
+        if (mainContent) {
+            const [ source, args ] = pages[path];
+            const handlebarsFunct = Handlebars.compile(source);
+            mainContent.innerHTML = handlebarsFunct(args);
+        }
     }
 }
 
