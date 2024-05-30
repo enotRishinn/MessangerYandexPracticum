@@ -1,0 +1,17 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss';  
+
+
+.profile-data {
+    color: #{$color-dark-gray};
+    align-items: center;
+
+    &__title {
+        display: inline-block;
+    }
+
+    &__value {
+        display: block;
+        float: right;
+    }
+}

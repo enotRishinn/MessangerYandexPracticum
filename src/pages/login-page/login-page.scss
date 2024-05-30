@@ -1,0 +1,27 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss';  
+
+
+.login-form {
+    background: $color-slightly-gray;
+    margin: 10%;
+    padding: 20px 0;
+
+    &__header {
+        padding-bottom: 10px;
+    }
+  
+    &__input {
+      margin-top: 16px;
+    }
+
+    &__footer {
+        margin-top: 40px;
+        display: inline-grid;
+    }
+
+    &__link {
+        margin-top: 10px;
+        font: #{$font-regular-thin};
+    }
+  }

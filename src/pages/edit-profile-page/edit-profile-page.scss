@@ -1,0 +1,24 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss'; 
+ 
+
+.edit-profile-page {
+    background: $color-slightly-gray;
+    margin: 10%;
+    padding: 20px 0;
+    display: table;
+    margin: 0 auto;
+
+
+    &__footer {
+        margin-top: 20px;
+        width: fit-content;
+    }
+
+    &__link {
+        margin-top: 10px;
+        font: #{$font-regular-thin};
+    }
+  }
+
+

@@ -1,0 +1,10 @@
+@import '../../../static/styles/colors.scss';
+
+
+.error-block-404 {
+    background-color: #{$color-slightly-gray};
+    display: table;
+    margin: 0 auto;
+    text-align-last: center;
+    margin-top: 15%;
+}

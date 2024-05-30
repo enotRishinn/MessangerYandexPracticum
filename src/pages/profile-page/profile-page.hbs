@@ -1,0 +1,22 @@
+<section class="profile-page">
+    <div class="profile-page__container">
+        <div class="profile-page__header">
+            {{> Avatar avatar_url="" }}
+            <div class="profile-page__username">Виктория</div>
+        </div>
+        <div class="profile-page__content">
+            {{> ProfileDataElement class="profile-page__element" id="profile-page_email" title="Почта" value="12344hda@mail.ru" }}
+            {{> ProfileDataElement class="profile-page__element" id="profile-page_login" title="Логин" value="user012" }}
+            {{> ProfileDataElement class="profile-page__element" id="profile-page_first_name" title="Имя" value="Виктория" }}
+            {{> ProfileDataElement class="profile-page__element" id="profile-page_second_name" title="Фамилия" value="Емцева" }}
+            {{> ProfileDataElement class="profile-page__element" id="profile-page_display_name" title="Имя в чате" value="Вика" }}
+            {{> ProfileDataElement class="profile-page__element" id="profile-page_phone" title="Телефон" value="+7 (931) 999 90 99"}}
+        </div>
+        <div class="profile-page__footer">
+            {{> Link class="profile-page__link" id="change_profile_link" value="Изменить данные" page="/edit-profile" }}
+            {{> Link class="profile-page__link" id="change_password_link" value="Изменить пароль" page="/change-password" }}
+            {{> Link class="profile-page__link" id="log_out_link" value="Выйти" page="/login" }}
+            {{> Link class="profile-page__link" value="Назад к чатам" page="/chats" }}
+        </div>
+    </div>
+</section>

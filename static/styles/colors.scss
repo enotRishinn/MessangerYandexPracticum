@@ -1,0 +1,21 @@
+$color-black: #000000;
+$color-light-black: #1E1E1E;
+
+$color-white: #FFFFFF;
+$color-slightly-gray: #FBFBFB;
+$color-light-gray: #EFEFEF;
+$color-gray: #BABABA;
+$color-dark-gray: #999999;
+
+$color-pink: #FE95E7;
+$color-light-pink: #FFDEF8;
+$color-violet: #4C38C6;
+$color-light-violet: #CBC3FC;
+
+$horizontal-gradient-dark: linear-gradient(to right, #{$color-pink} , #{$color-violet});
+$horizontal-gradient-light: linear-gradient(to right, #{$color-light-pink} , #{$color-violet});
+$vertical-gradient-dark: linear-gradient(#{$color-pink} , #{$color-violet});
+
+$dialog-shadow: 0px 0px 10px #{$color-dark-gray};
+
+$color-red: #FF2F2F;

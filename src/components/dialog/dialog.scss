@@ -1,0 +1,11 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss';   
+ 
+
+.dialog {
+    width: 300px;
+    background: $color-white;
+    box-shadow: $dialog-shadow;
+    border-radius: 10px 10px;
+    margin: 50px auto;
+}

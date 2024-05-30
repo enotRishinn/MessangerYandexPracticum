@@ -1,0 +1,12 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss';  
+
+
+.button {
+    background: #{$vertical-gradient-dark};
+    color: #{$color-white};
+    font: #{$font-regular-thin};
+    border-radius: 10px;
+    border: 0px;
+    padding: 5px 40px;
+}
