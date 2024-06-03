@@ -10,3 +10,10 @@
     align-content: center;
 }
 
+.dialog-user {
+    border-radius: 50%;
+    object-fit: cover;
+    background: #{$color-light-pink};
+    margin: 5px;
+}
+

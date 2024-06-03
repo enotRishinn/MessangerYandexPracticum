@@ -1,3 +1,12 @@
+@import '../../../static/styles/colors.scss';
+@import '../../../static/styles/fonts.scss';
+
 .input-field {
     margin-top: 16px;
+}
+
+.error-message {
+    color: #{$color-red};
+    font: #{$font-regular-small};
+    margin-top: 5px;
 }
