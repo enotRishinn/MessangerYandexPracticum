@@ -4,8 +4,8 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": [
-      "ES2020", 
-      "DOM", 
+      "ES2020",
+      "DOM",
       "DOM.Iterable"
     ],
     "skipLibCheck": true,
@@ -17,7 +17,7 @@
     },
 
     /* Bundler mode */
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
