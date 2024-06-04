@@ -16,7 +16,8 @@
       ]
     },
 
-    "moduleResolution": "bundler",
+    /* Bundler mode */
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
@@ -24,6 +25,7 @@
     "isolatedModules": true,
     "noEmit": true,
 
+    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -36,6 +38,6 @@
     "src",
     "src/**/*",
     "types/**/*.d.ts",
-    "server.js"  
+    "server.js",  
   ]
 }
