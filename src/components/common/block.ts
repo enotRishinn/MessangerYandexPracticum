@@ -1,10 +1,8 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Handlebars from 'handlebars';
 import EventBus from '../../utils/event-bus';
-import { deepEqual } from '../../utils/deep-equal';
-import type { TProps } from '../../types/common';
-
-type TChild = Record<string, Block>;
-type TChildList = Record<string, Block[]>;
+import deepEqual from '../../utils/deep-equal';
+import type { TProps, TChild, TChildList } from '../../types/common';
 
 export default class Block {
   private static readonly EVENTS = {
@@ -140,7 +138,7 @@ export default class Block {
     });
 
     Object.entries(this._lists || {}).forEach(([key, children]) => {
-      propsAndStubs[key] = children.map(child => `<div data-id="${child._id}"></div>`).join('');
+      propsAndStubs[key] = children.map((child) => `<div data-id="${child._id}"></div>`).join('');
     });
 
     const element: HTMLTemplateElement = this._createDocumentElement(this._meta?.tagName || 'div');
@@ -175,6 +173,7 @@ export default class Block {
   }
 
   private _addEvents(): void {
+    // eslint-disable-next-line no-undef
     const { events = {} } = this.props as { events?: Record<string, EventListener> };
 
     Object.keys(events).forEach((eventName) => {
@@ -183,6 +182,7 @@ export default class Block {
   }
 
   private _removeEvents(): void {
+    // eslint-disable-next-line no-undef
     const { events = {} } = this.props as { events?: Record<string, EventListener> };
 
     Object.keys(events).forEach((eventName) => {
@@ -203,8 +203,9 @@ export default class Block {
         return typeof value === 'function' ? value.bind(target) : value;
       },
       set(target: TProps, prop: string, value: unknown) {
-        target[prop] = value;
-        self.eventBus.emit(Block.EVENTS.FLOW_CDU);
+        const newTarget = target;
+        newTarget[prop] = value;
+        self.eventBus.emit(Block.EVENTS.FLOW_CDU, { ...newTarget }, newTarget);
         return true;
       },
       deleteProperty() {

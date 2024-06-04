@@ -9,7 +9,7 @@ export interface ILinkProps extends TProps {
     attr?: { [key: string]: string };
 }
 
-export class Link extends Block {
+export default class Link extends Block {
   constructor(props: ILinkProps) {
     super(props, 'div');
   }

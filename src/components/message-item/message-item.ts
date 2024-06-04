@@ -9,13 +9,13 @@ interface IMessageItemProps extends TProps {
     date: string;
     id: number;
   }
-  
-  export class MessageItem extends Block {
-    constructor(props: IMessageItemProps) {
-      super(props, 'div');
-    }
-  
-    render() {
-      return this.compileTemplate(template);
-    }
+
+export default class MessageItem extends Block {
+  constructor(props: IMessageItemProps) {
+    super(props, 'div');
   }
+
+  render() {
+    return this.compileTemplate(template);
+  }
+}

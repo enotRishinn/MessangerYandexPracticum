@@ -18,7 +18,6 @@ export default class EventBus {
   off(event: string, listener: TCallback): void {
     if (!this.listeners[event]) {
       throw new Error(`No listeners found for event: ${event}`);
-      return;
     }
 
     this.listeners[event] = this.listeners[event].filter((l) => l !== listener);
@@ -27,7 +26,6 @@ export default class EventBus {
   emit(event: string, ...args: TProps[]): void {
     if (!this.listeners[event]) {
       throw new Error(`No listeners found for event: ${event}`);
-      return;
     }
 
     this.listeners[event].forEach((listener) => listener(...args));

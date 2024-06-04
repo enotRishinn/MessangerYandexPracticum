@@ -9,13 +9,13 @@ interface IChatItemProps extends TProps {
     id: number;
     avatar: Block
   }
-  
-  export class ChatItem extends Block {
-    constructor(props: IChatItemProps) {
-        super(props, 'div');
-      }
-  
-    render() {
-      return this.compileTemplate(template);
-    }
+
+export default class ChatItem extends Block {
+  constructor(props: IChatItemProps) {
+    super(props, 'div');
   }
+
+  render() {
+    return this.compileTemplate(template);
+  }
+}

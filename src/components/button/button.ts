@@ -7,10 +7,11 @@ interface IButtonProps extends TProps {
   label: string;
   page?: string;
   type?: string;
+  // eslint-disable-next-line no-undef
   events?: { [key: string]: EventListener };
 }
 
-export class Button extends Block {
+export default class Button extends Block {
   constructor(props: IButtonProps) {
     super(props, 'div');
   }

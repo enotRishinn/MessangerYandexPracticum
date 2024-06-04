@@ -3,14 +3,13 @@ import Block from '../common/block';
 import type { TProps } from '../../types/common';
 import template from './template/profile-data-element';
 
-
 interface IProfileDataElementProps extends TProps {
   title: string;
   value: string;
   attr?: { [key: string]: string };
 }
 
-export class ProfileDataElement extends Block {
+export default class ProfileDataElement extends Block {
   constructor(props: IProfileDataElementProps) {
     super(props, 'div');
   }
@@ -19,4 +18,3 @@ export class ProfileDataElement extends Block {
     return this.compileTemplate(template);
   }
 }
-

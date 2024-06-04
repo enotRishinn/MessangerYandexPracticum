@@ -1,7 +1,6 @@
 import Block from './components/common/block';
 import * as Pages from './pages';
 
-// Хранение функций для создания страниц
 const routes: Record<string, () => Block> = {
   '/404': () => new Pages.NotFoundErrorPage(),
   '/500': () => new Pages.BugFixErrorPage(),
@@ -10,7 +9,7 @@ const routes: Record<string, () => Block> = {
   '/profile': () => new Pages.ProfilePage(),
   '/change-password': () => new Pages.ChangePasswordPage(),
   '/edit-profile': () => new Pages.EditProfilePage(),
-  '/chats': () => new Pages.ChatPage()
+  '/chats': () => new Pages.ChatPage(),
 };
 
 const render: (path: string) => void = (path) => {

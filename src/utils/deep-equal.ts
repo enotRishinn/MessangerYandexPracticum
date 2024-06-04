@@ -1,6 +1,6 @@
 import type { TProps } from '../types/common';
 
-export function deepEqual(obj1: TProps, obj2: TProps): boolean {
+export default function deepEqual(obj1: TProps, obj2: TProps): boolean {
   if (typeof obj1 !== 'object' || typeof obj2 !== 'object') {
     return obj1 === obj2;
   }
@@ -9,7 +9,7 @@ export function deepEqual(obj1: TProps, obj2: TProps): boolean {
     if (obj1.length !== obj2.length) {
       return false;
     }
-    for (let i = 0; i < obj1.length; i++) {
+    for (let i = 0; i < obj1.length; i += 1) {
       if (!deepEqual(obj1[i], obj2[i])) {
         return false;
       }
@@ -24,11 +24,12 @@ export function deepEqual(obj1: TProps, obj2: TProps): boolean {
     return false;
   }
 
-  for (const key of keys1) {
+  Object.keys(keys1).forEach((key) => {
     if (!keys2.includes(key) || !deepEqual(obj1[key] as TProps, obj2[key] as TProps)) {
       return false;
     }
-  }
+    return true;
+  });
 
   return true;
 }

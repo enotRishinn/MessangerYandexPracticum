@@ -1,15 +1,15 @@
-import openPage from "./open-page";
-import Validator from "./validation";
+import openPage from './open-page';
+import Validator from './validation';
 
 export default function onSubmit(form: HTMLTemplateElement, event: Event) {
   event.preventDefault();
 
   Validator.clearErrors(form);
-    
+
   let isValid = true;
   const inputs = form.querySelectorAll<HTMLInputElement>('input');
 
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     if (!Validator.validateField(input)) {
       isValid = false;
     }
@@ -23,6 +23,7 @@ export default function onSubmit(form: HTMLTemplateElement, event: Event) {
       formObject[key] = value.toString();
     });
 
+    // eslint-disable-next-line no-console
     console.log(formObject);
 
     const page = form.getAttribute('page');

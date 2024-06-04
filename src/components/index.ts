@@ -1,13 +1,12 @@
-export { Link } from './link/link';
-export { ErrorText } from './error-text/error-text';
-export { Dialog } from './dialog/dialog';
-export { Button } from './button/button';
-export { InputField } from './input-field/input-field';
-export { Input } from './input/input';
-export { Avatar } from './avatar/avatar';
-export { ProfileDataElement } from './profile-data-element/profile-data-element';
-export { ChatList } from './chat-list/chat-list';
-export { ChatItem } from './chat-item/chat-item';
-export { MessageItem } from './message-item/message-item';
-export { MessageList } from './message-list/message-list';
-
+export { default as Link } from './link/link';
+export { default as ErrorText } from './error-text/error-text';
+export { default as Dialog } from './dialog/dialog';
+export { default as Button } from './button/button';
+export { default as InputField } from './input-field/input-field';
+export { default as Input } from './input/input';
+export { default as Avatar } from './avatar/avatar';
+export { default as ProfileDataElement } from './profile-data-element/profile-data-element';
+export { default as ChatList } from './chat-list/chat-list';
+export { default as ChatItem } from './chat-item/chat-item';
+export { default as MessageItem } from './message-item/message-item';
+export { default as MessageList } from './message-list/message-list';

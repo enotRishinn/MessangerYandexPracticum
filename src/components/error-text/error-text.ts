@@ -10,7 +10,7 @@ export interface IErrorTextProps extends TProps {
     attr?: { [key: string]: string };
 }
 
-export class ErrorText extends Block {
+export default class ErrorText extends Block {
   constructor(props: IErrorTextProps) {
     super(props, 'div');
   }

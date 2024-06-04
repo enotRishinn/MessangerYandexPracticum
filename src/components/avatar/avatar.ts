@@ -6,11 +6,12 @@ import template from './template/avatar';
 interface IAvatarProps extends TProps {
   avatar_url: string;
   size: string;
+  // eslint-disable-next-line no-undef
   events?: { [key: string]: EventListener };
   attr?: { [key: string]: string };
 }
 
-export class Avatar extends Block {
+export default class Avatar extends Block {
   constructor(props: IAvatarProps) {
     super(props, 'div');
   }

@@ -7,12 +7,12 @@ interface IChatListProps extends TProps {
     chats: Block[];
   }
 
-export class ChatList extends Block {
-    constructor(props: IChatListProps) {
-      super(props, 'div');
-    }
-  
-    render() {
-      return this.compileTemplate(template);
-    }
+export default class ChatList extends Block {
+  constructor(props: IChatListProps) {
+    super(props, 'div');
   }
+
+  render() {
+    return this.compileTemplate(template);
+  }
+}
