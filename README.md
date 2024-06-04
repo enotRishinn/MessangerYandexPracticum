@@ -48,3 +48,19 @@
 `npm run build` - сборка проекта
 
 `npm run dev` - запуск проекта в режиме разработки
+
+`npm run eslint` - проверка файлов eslint
+
+`npm run eslint-fix` - проверка и фикс файлов eslint
+
+`npm run stylelint` - проверка файлов stylelint
+
+`npm run stylelint-fix` - проверка и фикс файлов stylelint
+
+## Технический обзор
+
+- В проекте для шаблонизации проекта используется Handlebars
+- Проект написан на TypeScript
+- В проетке используется SCSS
+- Для сборки используется Vite
+- Для линтинга используются Eslint и Stylelint

@@ -12,12 +12,16 @@
 
     &__footer {
         margin-top: 20px;
-        width: fit-content;
+        width: min-content;
     }
 
     &__link {
         margin-top: 10px;
         font: #{$font-regular-thin};
+    }
+
+    &__content {
+        width: min-content;
     }
   }
 

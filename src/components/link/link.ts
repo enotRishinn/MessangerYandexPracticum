@@ -1,2 +1,20 @@
 import './link.scss';
-export { default as Link } from './link.hbs?raw';
+import Block from '../common/block';
+import type { TProps } from '../../types/common';
+import template from './template/link';
+
+export interface ILinkProps extends TProps {
+    value: string,
+    page: string,
+    attr?: { [key: string]: string };
+}
+
+export default class Link extends Block {
+  constructor(props: ILinkProps) {
+    super(props, 'div');
+  }
+
+  render(): HTMLTemplateElement {
+    return this.compileTemplate(template);
+  }
+}

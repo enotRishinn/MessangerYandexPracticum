@@ -17,7 +17,7 @@
     },
 
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
@@ -29,7 +29,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "strictNullChecks": true
   },
   "include": [
     "src",

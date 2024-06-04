@@ -1,2 +1,20 @@
 import './profile-data-element.scss';
-export { default as ProfileDataElement } from './profile-data-element.hbs?raw';
+import Block from '../common/block';
+import type { TProps } from '../../types/common';
+import template from './template/profile-data-element';
+
+interface IProfileDataElementProps extends TProps {
+  title: string;
+  value: string;
+  attr?: { [key: string]: string };
+}
+
+export default class ProfileDataElement extends Block {
+  constructor(props: IProfileDataElementProps) {
+    super(props, 'div');
+  }
+
+  render() {
+    return this.compileTemplate(template);
+  }
+}
