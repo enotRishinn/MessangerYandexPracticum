@@ -1,10 +1,6 @@
-@import '../../../static/styles/colors.scss';
-@import '../../../static/styles/fonts.scss';
-
-
 .link {
-    color: #{$color-violet};
-    font: #{$font-medium};
+    color: #4C38C6;
+    font: 500 16px/16px;
     cursor: pointer;
 
     &:hover {

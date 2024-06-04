@@ -1,9 +1,5 @@
-@import '../../../static/styles/colors.scss';
-@import '../../../static/styles/fonts.scss';  
-
-
 .profile-data {
-    color: #{$color-dark-gray};
+    color: #999999;
     align-items: center;
 
     &__title {

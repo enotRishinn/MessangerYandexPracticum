@@ -1,15 +1,11 @@
-@import '../../../../../static/styles/colors.scss';
-@import '../../../../../static/styles/fonts.scss';  
-
-
 .login-form {
-    background: $color-slightly-gray;
+    background: #FBFBFB;
     margin: 10%;
     padding: 20px 0;
 
     &__header {
         padding-bottom: 10px;
-        font: #{$font-big};
+        font: 500 20px/20px;
     }
   
     &__input {
@@ -23,6 +19,6 @@
 
     &__link {
         margin-top: 10px;
-        font: #{$font-regular-thin};
+        font: 400 12px/12px;
     }
 }

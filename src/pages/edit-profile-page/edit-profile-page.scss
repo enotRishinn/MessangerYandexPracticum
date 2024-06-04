@@ -1,9 +1,5 @@
-@import '../../../static/styles/colors.scss';
-@import '../../../static/styles/fonts.scss'; 
- 
-
 .edit-profile-page {
-    background: $color-slightly-gray;
+    background: #FBFBFB;
     margin: 10%;
     padding: 20px 0;
     display: table;
@@ -17,7 +13,7 @@
 
     &__link {
         margin-top: 10px;
-        font: #{$font-regular-thin};
+        font: 400 12px/12px;
     }
 
     &__content {

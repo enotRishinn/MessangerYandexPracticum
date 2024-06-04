@@ -12,10 +12,10 @@ $color-light-pink: #FFDEF8;
 $color-violet: #4C38C6;
 $color-light-violet: #CBC3FC;
 
-$horizontal-gradient-dark: linear-gradient(to right, #{$color-pink} , #{$color-violet});
-$horizontal-gradient-light: linear-gradient(to right, #{$color-light-pink} , #{$color-violet});
-$vertical-gradient-dark: linear-gradient(#{$color-pink} , #{$color-violet});
+$horizontal-gradient-dark: linear-gradient(to right, #FE95E7 , #4C38C6);
+$horizontal-gradient-light: linear-gradient(to right, #FE95E7 , #4C38C6);
+$vertical-gradient-dark: linear-gradient(#FE95E7 , #4C38C6);
 
-$dialog-shadow: 0px 0px 10px #{$color-dark-gray};
+$dialog-shadow: 0px 0px 10px #999999;
 
 $color-red: #FF2F2F;

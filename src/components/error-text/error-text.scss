@@ -1,20 +1,16 @@
-@import '../../../static/styles/colors.scss';
-@import '../../../static/styles/fonts.scss';
-
-
 .error-code {
-    background: #{$vertical-gradient-dark};
+    background: linear-gradient(to right, #FE95E7 , #4C38C6);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font: #{$font-error-code};
+    font: 400 40px/40px;
 }
 
 .error-header {
-    color: #{$color-gray};
-    font: #{$font-large};
+    color: #BABABA;
+    font: 500 32px/32px;
 }
 
 .error-text {
-    color: #{$color-light-black};
-    font: #{$font-error-text};
+    color: #1E1E1E;
+    font: 500 32px/32px;
 }
