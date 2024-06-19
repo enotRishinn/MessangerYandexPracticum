@@ -1,3 +1,12 @@
+interface Options {
+  method?: string;
+  headers?: Record<string, string>;
+  data?: any;
+  timeout?: number;
+}
+
+type HTTPMethod = (url: string, options?: Options) => Promise<XMLHttpRequest>;
+
 const METHODS = {
   GET: 'GET',
   POST: 'POST',
@@ -18,30 +27,23 @@ function queryStringify(data: Record<string, any>): string {
   );
 }
 
-  interface Options {
-    method?: string;
-    headers?: Record<string, string>;
-    data?: any;
-    timeout?: number;
-  }
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
-class HTTPTransport {
-  get(url: string, options: Options = {}) {
-    return this.request(url, { ...options, method: METHODS.GET }, options.timeout);
-  }
+export default class HTTPTransport {
+  get: HTTPMethod = (url, options = {}) => (
+    this.request(url, { ...options, method: METHODS.GET }, options.timeout)
+  );
 
-  post(url: string, options: Options = {}) {
-    return this.request(url, { ...options, method: METHODS.POST }, options.timeout);
-  }
+  put: HTTPMethod = (url, options = {}) => (
+    this.request(url, { ...options, method: METHODS.PUT }, options.timeout)
+  );
 
-  put(url: string, options: Options = {}) {
-    return this.request(url, { ...options, method: METHODS.PUT }, options.timeout);
-  }
+  post: HTTPMethod = (url, options = {}) => (
+    this.request(url, { ...options, method: METHODS.POST }, options.timeout)
+  );
 
-  delete(url: string, options: Options = {}) {
-    return this.request(url, { ...options, method: METHODS.DELETE }, options.timeout);
-  }
+  delete: HTTPMethod = (url, options = {}) => (
+    this.request(url, { ...options, method: METHODS.DELETE }, options.timeout)
+  );
 
   // eslint-disable-next-line class-methods-use-this
   private request(url: string, options: Options, timeout = 5000): Promise<XMLHttpRequest> {
