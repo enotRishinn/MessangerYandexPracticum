@@ -1,12 +1,15 @@
-@import '../../../static/styles/colors.scss';
-
-
 .user_avatar {
     border-radius: 50%;
     object-fit: cover;
-    background: #{$color-light-pink};
+    background: #FFDEF8;
     display: block;
     margin: auto;
     align-content: center;
 }
 
+.dialog-user {
+    border-radius: 50%;
+    object-fit: cover;
+    background: #FFDEF8;
+    margin: 5px;
+}

@@ -1,43 +1,42 @@
-import Handlebars from 'handlebars';
-import * as Components from './components';
+import Block from './components/common/block';
 import * as Pages from './pages';
 
-const pages: { [key: string]: string[] } = {
-    '/login': [Pages.LoginPage],
-    '/register': [Pages.RegisterPage],
-    '/chats': [Pages.ChatPage],
-    '/500': [Pages.BugFixErrorPage],
-    '/404': [Pages.NotFoundErrorPage],
-    '/profile': [Pages.ProfilePage],
-    '/change-password': [Pages.ChangePasswordPage],
-    '/edit-profile': [Pages.EditProfilePage]
+const routes: Record<string, () => Block> = {
+  '/404': () => new Pages.NotFoundErrorPage(),
+  '/500': () => new Pages.BugFixErrorPage(),
+  '/login': () => new Pages.LoginPage(),
+  '/register': () => new Pages.RegisterPage(),
+  '/profile': () => new Pages.ProfilePage(),
+  '/change-password': () => new Pages.ChangePasswordPage(),
+  '/edit-profile': () => new Pages.EditProfilePage(),
+  '/chats': () => new Pages.ChatPage(),
 };
 
-Object.entries(Components).forEach(([ name, component ]) => {
-    Handlebars.registerPartial(name, component);
-});
+const render: (path: string) => void = (path) => {
+  const app = document.getElementById('main-content');
 
-function navigate(path: string) {
-    if (!pages[path]) {
-        window.location.pathname = '/login';
+  if (app) {
+    app.innerHTML = '';
+
+    const createPage = routes[path];
+    if (createPage) {
+      const page = createPage();
+      app.append(page.getContent() as HTMLElement);
     } else {
-        const mainContent = document.getElementById("main-content");
-
-        if (mainContent) {
-            const [ source, args ] = pages[path];
-            const handlebarsFunct = Handlebars.compile(source);
-            mainContent.innerHTML = handlebarsFunct(args);
-        }
+      const notFoundPage = routes['/404']();
+      app.append(notFoundPage.getContent() as HTMLElement);
     }
-}
+  }
+};
 
-document.addEventListener('DOMContentLoaded', () => navigate(window.location.pathname));
+document.addEventListener('DOMContentLoaded', () => {
+  const path = window.location.pathname;
 
-document.addEventListener('click', (e: MouseEvent) => {
-    const page = (e.target as HTMLInputElement).getAttribute('page');
-    if (page) {
-        window.location.pathname = page;
-        e.preventDefault();
-    }
-  
+  if (path in routes) {
+    render(path);
+  } else if (path === '/') {
+    render('/login');
+  } else {
+    render('/404');
+  }
 });

@@ -1,10 +1,6 @@
-@import '../../../static/styles/colors.scss';
-@import '../../../static/styles/fonts.scss';  
-
-
 .profile-page {
     width: 300px;
-    background: $color-slightly-gray;
+    background: #FBFBFB;
     margin: 0 auto;
     padding: 20px 0;
 
@@ -14,7 +10,7 @@
 
     &__username {
         width: fit-content;
-        font: $font-big;
+        font: 500 20px/20px;
         display: block;
         margin: 15px auto;
     }
@@ -30,6 +26,6 @@
 
     &__link {
         margin-top: 10px;
-        font: #{$font-regular-thin};
+        font: 400 12px/12px;
     }
-  }
+}

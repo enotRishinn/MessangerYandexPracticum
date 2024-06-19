@@ -1,0 +1,30 @@
+.message-item {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+
+    &__content {
+      word-wrap: break-word;
+    }
+
+    &__date {
+      font-size: 10px;
+      color: #aaa;
+      bottom: -20px;
+      right: 10px;
+    }
+
+    &--my {
+      align-self: flex-end;
+      background-color: #edcff3;
+      border-top-right-radius: 0;
+    }
+
+    &--other {
+      align-self: flex-start;
+      background-color: #ffffff;
+      border-top-left-radius: 0;
+      border: 1px solid #e6ecf3;
+    }
+}

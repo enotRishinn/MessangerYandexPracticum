@@ -1,0 +1,10 @@
+/build
+**/*.min.js
+/node_modules
+/dist
+server.js
+vite.config.js
+ 
+*.hbs
+*.scss
+*.html

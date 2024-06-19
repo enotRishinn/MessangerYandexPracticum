@@ -1,0 +1,19 @@
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    img.user_avatar {
+      margin-right: 10px;
+    }
+
+    .chat-item__name {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .chat-item__last-message {
+      color: #999;
+    }
+}

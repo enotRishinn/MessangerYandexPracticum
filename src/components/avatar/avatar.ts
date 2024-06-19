@@ -1,2 +1,22 @@
 import './avatar.scss';
-export { default as Avatar } from './avatar.hbs?raw';
+import Block from '../common/block';
+import type { TProps } from '../../types/common';
+import template from './template/avatar';
+
+interface IAvatarProps extends TProps {
+  avatar_url: string;
+  size: string;
+  // eslint-disable-next-line no-undef
+  events?: { [key: string]: EventListener };
+  attr?: { [key: string]: string };
+}
+
+export default class Avatar extends Block {
+  constructor(props: IAvatarProps) {
+    super(props, 'div');
+  }
+
+  render() {
+    return this.compileTemplate(template);
+  }
+}

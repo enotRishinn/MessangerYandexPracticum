@@ -1,0 +1,23 @@
+.register-form {
+    background: #FBFBFB;
+    margin: 10%;
+    padding: 20px 0;
+
+    &__header {
+        padding-bottom: 10px;
+    }
+  
+    &__input {
+      margin-top: px;
+    }
+
+    &__footer {
+        margin-top: 40px;
+        display: inline-grid;
+    }
+
+    &__link {
+        margin-top: 10px;
+        font: 400 12px/12px;
+    }
+}
